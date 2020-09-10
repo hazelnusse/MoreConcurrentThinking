@@ -1,0 +1,2 @@
+add_executable(diningphilosophers diningphilosophers)
+target_link_libraries(diningphilosophers actors)

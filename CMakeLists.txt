@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+find_package(Threads REQUIRED)
 enable_testing()
 
 # Location for any external projects source and installation.
@@ -29,4 +30,6 @@ ExternalProject_Add(project_boost.ut
 add_library(boost.ut INTERFACE)
 target_include_directories(boost.ut INTERFACE ${BOOST_UT_INSTALL_DIR}/include)
 
+add_subdirectory(class_files)
 add_subdirectory(day1)
+add_subdirectory(day2)
